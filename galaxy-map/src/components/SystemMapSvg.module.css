@@ -1,0 +1,44 @@
+.root {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  user-select: none;
+}
+
+.dragging {
+  cursor: grabbing;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+}
+
+.hit {
+  pointer-events: all;
+}
+
+.axis {
+  stroke: #2a3444;
+  stroke-width: 1;
+  pointer-events: none;
+}
+
+.planet {
+  fill: var(--node-fill);
+  stroke: var(--node);
+  stroke-width: 2;
+}
+
+.planetSelected {
+  stroke: #ffb86c;
+  stroke-width: 3;
+}
+
+.plname {
+  fill: var(--muted);
+  font-size: 12px;
+  pointer-events: none;
+}

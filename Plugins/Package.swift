@@ -33,6 +33,9 @@ let package = Package(
         .library(
             name: "SoundEditor",
             targets: ["SoundEditor"]),
+        .executable(
+            name: "galaxy-export",
+            targets: ["GalaxyExport"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-collections.git", "1.0.0"..<"2.0.0"),
@@ -73,5 +76,11 @@ let package = Package(
         .target(
             name: "SoundEditor",
             dependencies: [.target(name: "RFSupport")]),
+        .executableTarget(
+            name: "GalaxyExport",
+            dependencies: [
+                .target(name: "RFSupport"),
+                .product(name: "OrderedCollections", package: "swift-collections"),
+            ]),
     ]
 )

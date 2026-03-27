@@ -1,0 +1,150 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.45rem;
+  padding: 0.5rem 1rem;
+  background: var(--panel);
+  border-bottom: 1px solid #222;
+  flex-shrink: 0;
+}
+
+.toolbarTop {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+}
+
+.legendRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid #222;
+  min-height: 1.35rem;
+}
+
+.legendRowCommodity {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.legendPlaceholder {
+  font-size: 0.65rem;
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+.toolbar h1 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.commodityLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.commodityLabelText {
+  flex-shrink: 0;
+}
+
+.commoditySelect {
+  font: inherit;
+  font-size: 0.8125rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid #2a3344;
+  border-radius: 4px;
+  padding: 0.2rem 0.45rem;
+  max-width: 9rem;
+}
+
+.commodityLegend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  font-size: 0.65rem;
+  color: var(--muted);
+  flex: 1;
+  min-width: 0;
+}
+
+.legendScroll {
+  max-height: 4.5rem;
+  overflow-y: auto;
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.legendItemMuted {
+  opacity: 0.48;
+}
+
+.legendSwatch {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  line-height: 1;
+}
+
+.hintBar {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.mapStage {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mapStatsOverlay {
+  position: absolute;
+  bottom: 0.65rem;
+  left: 0.65rem;
+  max-width: min(26rem, calc(100% - 1.3rem));
+  padding: 0.35rem 0.55rem;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: var(--text);
+  background: rgba(11, 13, 18, 0.82);
+  border: 1px solid #2a3344;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 3;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.mapPlaceholder {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  background: var(--bg);
+}

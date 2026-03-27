@@ -1,0 +1,28 @@
+:root {
+  color-scheme: dark;
+  --bg: #0b0d12;
+  --panel: #141820;
+  --text: #e8eaef;
+  --muted: #8b92a5;
+  --accent: #6cb3ff;
+  --edge: rgba(61, 70, 88, 0.38);
+  --node: #6cb3ff;
+  --node-fill: #1e2a3d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family:
+    "SF Pro Text",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}

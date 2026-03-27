@@ -1,0 +1,196 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.dialog {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: min(960px, 96vw);
+  max-height: min(88vh, 900px);
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid #2a3344;
+  border-radius: 10px;
+  padding: 1rem 1.25rem 1.25rem;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.title {
+  margin: 0 2rem 0.25rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sub {
+  margin: 0 0 0.75rem;
+  font-size: 0.9375rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.9375rem;
+}
+
+.dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2rem 1rem;
+  margin: 0.35rem 0;
+}
+
+.dl dt {
+  color: var(--muted);
+}
+
+.meta {
+  margin: 0.35rem 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  height: min(60vh, 560px);
+  min-height: 260px;
+  max-height: calc(min(88vh, 900px) - 5.5rem);
+  overflow: hidden;
+  align-items: stretch;
+}
+
+.split > * {
+  min-height: 0;
+}
+
+@media (max-width: 720px) {
+  .split {
+    grid-template-columns: 1fr;
+    height: auto;
+    min-height: 240px;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .detailCol {
+    max-height: min(50vh, 420px);
+  }
+}
+
+.mapCol {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.mapHint {
+  margin: 0 0 0.35rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.mapShell {
+  flex: 1;
+  min-height: 220px;
+  background: #0a0c10;
+  border-radius: 6px;
+  border: 1px solid #222a36;
+  cursor: grab;
+}
+
+.detailCol {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  min-height: 0;
+  min-width: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 0.35rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pbtm {
+  margin-top: 0.75rem !important;
+}
+
+.h4 {
+  margin: 1rem 0 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.placeholder {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0;
+  font-size: 0.8125rem;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 0.25rem 0.5rem 0.25rem 0;
+  vertical-align: top;
+  border-bottom: 1px solid #222;
+}
+
+.table th {
+  color: var(--muted);
+  font-weight: 500;
+  width: 42%;
+}
+
+.flags {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}

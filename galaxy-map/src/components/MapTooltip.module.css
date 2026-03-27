@@ -1,0 +1,34 @@
+.tooltip {
+  position: fixed;
+  z-index: 20;
+  max-width: 320px;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  background: rgba(20, 24, 32, 0.95);
+  border: 1px solid #333;
+  border-radius: 6px;
+  pointer-events: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.tooltip :global(h2) {
+  margin: 0 0 0.35rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.tooltip :global(.meta) {
+  color: var(--muted);
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.tooltip :global(ul) {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.tooltip :global(li) {
+  margin: 0.15rem 0;
+}

@@ -1,5 +1,8 @@
 .DS_Store
 
+galaxy-map/node_modules/
+galaxy-map/dist/
+
 # Xcode user data
 *.xcworkspace/
 xcuserdata/
